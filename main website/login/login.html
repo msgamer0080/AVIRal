@@ -1,0 +1,45 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+<form method="POST" action="login.php">
+<label for="user">USERNAME</label>
+<input type="text">
+<label for="pass">PASSWORD</label>
+<input type="password">
+<button type="submit">SUBMIT</button>
+</form>
+<?php
+    if(isset($_POST['submit']))
+    {
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+    // Check if field is empty
+    if(empty($user)) {
+        // Handle empty field error
+    }
+    if(empty($pass)) {
+        // Handle empty field error
+    }
+    
+    // Check for no special characters
+    if(preg_match('/^[a-zA-Z0-9]*$/', $user)) {
+        // No special characters found
+    } else {
+        // Handle special characters error
+    }
+    
+    // Validate no numbers
+    if(!preg_match('/[0-9]/', $pass)) {
+        // No numbers found
+    } else {
+        // Handle numbers found error
+    }
+    }
+    ?>
+</body>
+
+</html>
